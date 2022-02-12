@@ -1,0 +1,43 @@
+<main>
+  <section class="form" id="loginForm">
+    <h2>ورود</h2>
+    <form #signInForm="ngForm" (ngSubmit)="login(signInForm.value)" action="">
+      <div class="inputbox">
+        <label for="email">نام کاربری:</label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          type="text"
+          id="username"
+          placeholder="نام کاربری خود را وارد کنید"
+          required
+        /><br />
+        <label for="email">ایمیل:</label>
+        <input
+          [(ngModel)]="email"
+          name="email"
+          type="text"
+          id="email"
+          placeholder="ایمیل خود را وارد کنید"
+          required
+        /><br />
+        <label for="password">رمز:</label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          placeholder="رمز خود را وارد کنید"
+          minlength="6"
+          maxlength="12"
+          id="password"
+          required
+        />
+      </div>
+      <button type="submit">ورود</button>
+    </form>
+    <h4>حساب کاربری ندارید؟</h4>
+    <button routerLink="/signUp">
+      <a >ثبت نام</a>
+    </button>
+  </section>
+</main>

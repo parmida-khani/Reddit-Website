@@ -1,0 +1,95 @@
+app-main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 0.7rem lightgrey;
+  z-index: 2;
+}
+
+main {
+  padding-bottom: 2rem;
+  padding-top: 9rem;
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  width: 100%;
+}
+main .create {
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+main .create svg {
+  cursor: pointer;
+  outline: none;
+}
+main .create span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  right: 1rem;
+  top: 0.3rem;
+}
+main #posts {
+  background-color: white;
+  box-shadow: 0 0 0.7rem lightgrey;
+  margin: 2rem;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+main #posts .cards {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding-top: 4rem;
+  border-top: 1px solid black;
+}
+main #posts h2 {
+  color: black;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+main #posts a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+main #posts a:hover {
+  color: white;
+}
+main #posts button {
+  cursor: pointer;
+  float: left;
+  width: 9rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+main #posts button a {
+  color: gray;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+main #posts button:hover {
+  background-color: #98c1d9;
+}
+main #posts button:hover a {
+  color: black;
+}
+main #posts button.selected {
+  background-color: #3d5a80;
+}
+main #posts button.selected a {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  main #posts .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=main.component.css.map */

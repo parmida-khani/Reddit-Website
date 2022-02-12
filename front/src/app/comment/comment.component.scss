@@ -1,0 +1,67 @@
+@use "../../styles/colors";
+
+section {
+  background-color: #f3f3f3;
+}
+#comment {
+  margin: 5rem 5rem 5rem 1rem;
+  width: calc(100% - 18rem);
+  height: 5rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0.5rem lightgrey;
+  padding: 2rem;
+  &:focus {
+    border: 1px solid colors.$color-dark-blue;
+  }
+}
+
+button {
+  background-color: colors.$color-dark-blue;
+  border: none;
+  outline: none;
+  height: 5rem;
+  width: 7rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7rem;
+  &:hover {
+    background-color: colors.$color-navy;
+  }
+}
+
+.comments {
+  margin: 0 5rem ;
+  height: calc(100vh - 15rem);
+  overflow-y: auto;
+  table, td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td {
+    font-size: 1.3rem;
+    padding: 2rem;
+  }
+  .username {
+    width: max-content;
+    font-weight: bold;
+    color: colors.$color_dark-blue
+  }
+  svg {
+    cursor: pointer;
+  }
+  .like {
+    width: 5rem;
+  }
+  .reply {
+    width: 7rem;
+  }
+}

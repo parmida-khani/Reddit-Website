@@ -1,0 +1,43 @@
+<p>setting works!</p>
+<main>
+  <section class="form" id="registerForm">
+    <h2>تنظیمات</h2>
+    <form #settingForm ="ngForm" (ngSubmit)="save(settingForm.value)" action="">
+      <div class="inputbox">
+        <label for="username">نام کاربری:</label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          id="username"
+          type="text"
+          required
+        />
+      </div>
+      <div class="inputbox">
+        <label for="password">رمز عبور:</label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          id="password"
+          type="password"
+          minlength="6"
+          maxlength="12"
+          required
+        />
+      </div>
+      <div class="inputbox">
+        <label for="email" class="">ایمیل:</label>
+        <input
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+          id="email"
+          required
+        />
+      </div>
+      <div>
+        <button type="submit" id="submitButton">ذخیره</button>
+      </div>
+    </form>
+  </section>
+</main>

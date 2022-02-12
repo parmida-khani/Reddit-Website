@@ -1,0 +1,95 @@
+@use "../../styles/colors";
+@use "../../styles/formTemplate" as f;
+
+$input-height: 4rem;
+$default-rem: 2rem;
+
+main {
+  @include f.centering;
+
+  .form {
+    @include f.createForm;
+    min-width: 45%;
+    form {
+      .inputbox {
+        height: 4.5rem;
+
+        label {
+          font-weight: bold;
+          font-size: 1.3rem;
+          color: colors.$color-navy;
+          margin-top: 1.1rem;
+          float: right;
+        }
+
+        input,textarea,select {
+          @include f.createInputBoxes;
+          width: 70%;
+          float: left;
+        }
+        textarea {
+          height: 15rem;
+          resize: vertical;
+        }
+        select {
+          height: auto;
+          padding: 1rem;
+        }
+        #image {
+          margin-top: 1rem;
+          border: none;
+          padding: 0;
+        }
+      }
+
+      > span {
+        clear: both;
+
+        @include f.centering;
+        button {
+          background-color: colors.$color-orange;
+          font-weight: bold;
+          color: white;
+          width: 15rem;
+          height: 4rem;
+          border-radius: 0.5rem;
+          border: none;
+          transition-property: width;
+          transition-duration: 500ms;
+          transition-timing-function: linear;
+          margin-top: $default-rem;
+          &:hover {
+            background-color: colors.$color-navy;
+            font-weight: bold;
+            width: 25rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    div:last-of-type {
+      font-size: 1.2rem;
+      a {
+        color: colors.$color-orange;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: colors.$color-dark-orange;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 410px) {
+  main .form form .inputbox input {
+    display: block;
+    width: 100%;
+  }
+  main .form form > div:last-of-type button {
+    width: 100%;
+    margin-top: 4rem;
+
+  }
+}

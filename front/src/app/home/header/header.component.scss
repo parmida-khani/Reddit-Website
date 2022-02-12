@@ -1,0 +1,82 @@
+@use "../../../styles/colors";
+
+$default-rem:2rem;
+
+header {
+  background-color: white;
+  height: 10rem;
+  nav {
+    svg {
+      margin-right: $default-rem;
+      margin-top: 1.7rem;
+      float: right;
+    }
+    span {
+      margin-top: 3.5rem;
+      margin-right: 1rem;
+      font-size: $default-rem;
+      color: colors.$color-orange;
+      font-weight: bold;
+      float: right;
+    }
+    button {
+      float: left;
+      margin: 2.5rem 0 0 $default-rem;
+      height: 5rem;
+      width: 10rem;
+      border-radius: 1rem;
+      text-align: center;
+      &:first-of-type {
+        background-color: colors.$color-orange;
+        border: none;
+        color: white;
+        font-size: 1.7rem;
+        font-weight: bold;
+        &:hover {
+          background-color: colors.$color-dark-orange;
+          cursor: pointer;
+        }
+      }
+      &:last-of-type {
+        background:none;
+        border: 0.2rem solid colors.$color-orange;
+        color: colors.$color-orange;
+        font-size: 1.7rem;
+        font-weight: bold;
+        &:hover {
+          border-color: colors.$color-dark-orange;
+          cursor: pointer;
+          color: colors.$color-dark-orange;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  header {
+    height: 14rem;
+    padding: $default-rem 0;
+
+    nav {
+      img {
+        margin-right: 1rem;
+        height: 5rem;
+        width: 5rem;
+        margin-top: 2.5rem;
+
+      }
+      button {
+        width: 7rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+@media screen and (min-height: 720px) and (min-width: 490px) {
+  header {
+    height: 20rem;
+    padding: 5rem;
+  }
+
+}

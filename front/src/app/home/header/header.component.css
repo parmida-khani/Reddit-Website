@@ -1,0 +1,76 @@
+header {
+  background-color: #f3f3f3;
+  height: 10rem;
+}
+header nav img {
+  margin-right: 2rem;
+  margin-top: 1.7rem;
+  float: right;
+}
+header nav span {
+  margin-top: 3.5rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: #da5656;
+  font-weight: bold;
+  float: right;
+}
+header nav button {
+  float: left;
+  margin: 2.5rem 0 0 2rem;
+  height: 5rem;
+  width: 10rem;
+  border-radius: 999rem;
+}
+header nav button:first-of-type {
+  background-color: #ffa0a0;
+  border: none;
+}
+header nav button:first-of-type:hover {
+  background-color: #da5656;
+  cursor: pointer;
+}
+header nav button:first-of-type:hover a {
+  color: white;
+}
+header nav button:first-of-type a {
+  color: #262a53;
+  font-size: 1.7rem;
+}
+header nav button:first-of-type a:link {
+  text-decoration: none;
+}
+header nav button:last-of-type {
+  border: 0.2rem solid #da5656;
+}
+header nav button:last-of-type:hover {
+  border-color: #ffa0a0;
+  cursor: pointer;
+}
+header nav button:last-of-type a {
+  color: #da5656;
+  font-size: 1.7rem;
+}
+header nav button:last-of-type a:link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 490px) {
+  header {
+    height: 20rem;
+  }
+  header nav div {
+    display: block;
+  }
+  header nav button {
+    clear: right;
+  }
+}
+@media screen and (min-height: 720px) and (min-width: 490px) {
+  header {
+    height: 20rem;
+    padding: 5rem;
+  }
+}
+
+/*# sourceMappingURL=header.component.css.map */

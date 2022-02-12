@@ -1,0 +1,66 @@
+section {
+  background-color: #f3f3f3;
+}
+
+#comment {
+  margin: 5rem 5rem 5rem 1rem;
+  width: calc(100% - 18rem);
+  height: 5rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0.5rem lightgrey;
+  padding: 2rem;
+}
+#comment:focus {
+  border: 1px solid #3d5a80;
+}
+
+button {
+  background-color: #3d5a80;
+  border: none;
+  outline: none;
+  height: 5rem;
+  width: 7rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+button:hover {
+  background-color: #293241;
+}
+
+.comments {
+  margin: 0 5rem;
+  height: calc(100vh - 15rem);
+  overflow-y: auto;
+}
+.comments table, .comments td {
+  border-bottom: 1px solid #ddd;
+}
+.comments table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.comments td {
+  font-size: 1.3rem;
+  padding: 2rem;
+}
+.comments .username {
+  width: max-content;
+  font-weight: bold;
+  color: #3d5a80;
+}
+.comments svg {
+  cursor: pointer;
+}
+.comments .like {
+  width: 5rem;
+}
+.comments .reply {
+  width: 7rem;
+}
+
+/*# sourceMappingURL=comment.component.css.map */

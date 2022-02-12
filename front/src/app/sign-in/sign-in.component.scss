@@ -1,0 +1,78 @@
+@use "../../styles/colors";
+@use "../../styles/formTemplate" as f;
+
+$input-height: 4rem;
+$default-rem: 2rem;
+
+main {
+  @include f.centering;
+  .form {
+    @include f.createForm;
+    form {
+      .inputbox {
+        input {
+          @include f.createInputBoxes;
+          width: 100%;
+          height: $input-height;
+        }
+        label {
+          display: block;
+          font-size: 1.4rem;
+          color: colors.$color-navy;
+        }
+      }
+      button {
+        border: 1px solid colors.$color-orange;
+        border-radius: 0.5rem;
+        height: $input-height;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: colors.$color-orange;
+        color: white;
+        font-weight: bold;
+
+        a {
+          text-decoration: none;
+          font-size: 1.5rem;
+        }
+        &:hover {
+          border: 1px solid colors.$color-dark-orange;
+          background-color: colors.$color-dark-orange;
+          cursor: pointer;
+
+          a {
+            color: colors.$color-dark-orange;
+          }
+        }
+      }
+    }
+    h4 {
+      color: colors.$color-navy;
+      display: inline-block;
+      font-size: 1.1rem;
+      width: 45%;
+    }
+    > button {
+      width: 55%;
+      border-radius: 0.5rem;
+      height: $input-height;
+      background: none;
+      border: 2px solid colors.$color-dark-blue;
+      a {
+        text-decoration: none;
+        color: colors.$color-dark-blue;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+      &:hover {
+        background-color: colors.$color-dark-blue;
+        cursor: pointer;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+

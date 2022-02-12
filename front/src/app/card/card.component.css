@@ -1,0 +1,67 @@
+.card {
+  background-color: white;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.card h4 {
+  padding: 2rem;
+}
+.card h4 span {
+  color: gray;
+  font-size: 1.3rem;
+  margin-right: 1.2rem;
+  font-weight: lighter;
+}
+.card h4 a {
+  color: #3d5a80;
+  font-size: 1.8rem;
+}
+.card h4 a:link {
+  text-decoration: none;
+}
+.card h4 a:hover {
+  cursor: pointer;
+}
+.card a img {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.card a img:hover {
+  cursor: pointer;
+}
+.card .container {
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+.card .container svg {
+  position: relative;
+  top: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+.card .container svg:last-of-type {
+  margin-right: 1rem;
+}
+.card .container > div {
+  margin-bottom: 1rem;
+}
+.card .container span {
+  position: relative;
+  top: 0.6rem;
+  float: left;
+  color: gray;
+  font-weight: bold;
+}
+.card .container details {
+  margin-top: 1rem;
+}
+.card .container details summary {
+  padding-bottom: 1rem;
+}
+
+/*# sourceMappingURL=card.component.css.map */

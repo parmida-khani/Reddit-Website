@@ -1,0 +1,92 @@
+@use "../../../styles/colors";
+
+$default-rem:2rem;
+
+header {
+
+  height: 8rem;
+  nav {
+    display: inline-block;
+    float: left;
+  }
+  font-size: 12px;
+  background-color: white;
+  width: auto;
+  padding: 1rem;
+  > span {
+    position: absolute;
+    top: 2.5rem;
+    right: 10.5rem;
+    font-size: $default-rem;
+    color: colors.$color-orange;
+    font-weight: bold;
+  }
+  svg {
+    margin-right: $default-rem;
+  }
+
+  #search {
+    margin-left: 2.3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 0.7rem 3rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    background-color: #f3f3f3;
+    &:focus {
+      border-bottom: 2px solid colors.$color-orange;
+
+    }
+  }
+
+  #searchSvg {
+    position: relative;
+    right: 2.3rem;
+    top: 0.7rem;
+  }
+
+  #setting {
+    position: relative;
+    top: 1.2rem;
+    &:hover {
+      fill: colors.$color-orange;
+    }
+  }
+  ul {
+    margin-top: 0.2rem;
+  }
+  li {
+    display: inline;
+    font-size: 1.5rem;
+    &:nth-of-type(2) {
+      border-left: 2px solid lightgrey;
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      &:hover{
+        color: colors.$color-orange;
+      }
+
+    }
+  }
+}
+
+//@media screen and (max-width: 600px){
+//  header nav {
+//    padding-top: 1.5rem;
+//    li{
+//      display: block;
+//      margin: 0 0 0 $default-rem;
+//    }
+//
+//  }
+//}@media screen and (max-width: 400px){
+//  .username_hidden {
+//    display: none;
+//  }
+//}

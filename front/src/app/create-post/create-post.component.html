@@ -1,0 +1,49 @@
+<main>
+  <section class="form" id="createPostForm">
+    <h2>افزودن پست</h2>
+    <form #createPostForm ="ngForm" (ngSubmit)="createPost(createPostForm.value)" action="" >
+      <div class="inputbox">
+        <label for="communityName">انجمن</label>
+        <select name="communityName" id="communityName">
+          <option [value]="communityName" selected="selected">{{communityName}}</option>
+        </select>
+      </div>
+      <div class="inputbox">
+        <label for="title">عنوان</label>
+        <em *ngIf="createPostForm.controls.title?.invalid && (createPostForm.controls.title?.touched || mouseOverCreatePostForm)">Required</em>
+
+        <input
+          [(ngModel)]="title"
+          name="title"
+          id="title"
+          type="text"
+          placeholder="عنوان پست را وارد کنید"
+          required
+        />
+      </div>
+
+      <div class="inputbox">
+        <label for="image_input" class="button">عکس :</label>
+
+        <input
+          (change)="addImage($event)"
+          type="file"
+          id="image_input"
+          name="image"
+          accept="image/*"
+        />
+
+      </div>
+
+      <div class="inputbox" >
+        <label for="text">متن:</label>
+        <em *ngIf="createPostForm.controls.text?.invalid && (createPostForm.controls.text?.touched || mouseOverCreatePostForm)">Required</em>
+
+        <textarea name="text" id="text" [(ngModel)]="text" cols="30" rows="10" required></textarea>
+      </div>
+      <span (mouseenter)="mouseOverCreatePostForm=true" (mouseleave)="mouseOverCreatePostForm=false">
+        <button type="submit" [disabled]="createPostForm.invalid" id="submitButton">ثبت</button>
+      </span>
+    </form>
+  </section>
+</main>

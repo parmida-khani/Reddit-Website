@@ -1,0 +1,71 @@
+@use "../../styles/colors";
+
+.card {
+
+  background-color: white;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 1.2rem 2.4rem 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  h4 {
+    padding:2rem;
+
+    span {
+      color: gray;
+      font-size: 1.3rem;
+      margin-right: 1.2rem;
+      font-weight: lighter;
+    }
+    a {
+      color: colors.$color-dark-blue;
+      font-size: 1.8rem;
+
+      &:link {
+        text-decoration: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  a img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .container {
+    padding:2rem;
+    font-size: 1.3rem;
+    svg {
+      position: relative;
+      top: 0.5rem;
+      cursor: pointer;
+      outline: none;
+
+      &:last-of-type {
+        margin-right: 1rem;
+      }
+    }
+    >div{
+      margin-bottom: 1rem;
+    }
+    span {
+      position: relative;
+      top: 0.6rem;
+      float: left;
+      color: gray;
+      font-weight: bold;
+    }
+    details{
+      margin-top: 1rem;
+      summary{
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}

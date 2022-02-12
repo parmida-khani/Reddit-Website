@@ -1,0 +1,43 @@
+@use "./colors";
+
+@mixin centering {
+  display: flex;
+  justify-content: center;
+}
+
+$default-rem: 2rem;
+
+@mixin createForm {
+  border-radius: 1rem;
+  margin: 5rem 0;
+  min-width: 35%;
+  box-shadow: 0 0 $default-rem lightgrey;
+  padding: 4rem;
+  * {
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    color: colors.$color-navy;
+  }
+}
+
+@mixin createInputBoxes {
+  border-radius: 0.5rem;
+  border: 1px solid colors.$color-navy;
+  height: 3.5rem;
+  padding: $default-rem;
+
+  &:hover {
+    border: 2px solid black;
+  }
+
+  &:focus {
+    border: 0.2rem solid colors.$color-dark-orange;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+
+}

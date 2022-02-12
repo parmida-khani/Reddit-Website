@@ -1,0 +1,19 @@
+main img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: block;
+}
+
+@media screen and (max-width: 490px) {
+  main img {
+    height: 40vh;
+  }
+}
+@media screen and (min-height: 720px) and (min-width: 490px) {
+  main img {
+    height: 60vh;
+  }
+}
+
+/*# sourceMappingURL=background.component.css.map */
